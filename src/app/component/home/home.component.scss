@@ -1,0 +1,52 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mat-toolbar {
+  flex: 0 0 auto; /* Let the toolbar grow and shrink as needed */
+}
+
+.addemp{
+    font: normal normal normal 22px/29px Roboto;
+    color: #ffffff;
+    letter-spacing: 0px;
+    opacity: 1;
+    background: #008CFF 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 18px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+   
+}
+
+
+.main-body{
+  padding-top: 20px;
+  max-width: 1248px;
+  margin: 0 auto;
+  mat-form-field{
+    width :100%
+  
+  }
+} 
+
+.table-container table th {
+  background-color: #ffffff;
+  color: #658292; /* Text color for the header row */
+}
+
+/* White background color for all other rows */
+.table-container table td {
+  background-color: #FFFFFF;
+  color: #000000; /* Text color for the data rows */
+}
+.filter-field {
+margin-left: 10px; /* Adjust margin-left as needed */
+margin-top: 22px; /* Adjust margin-top as needed */
+width: 150px; /* Adjust width as needed */
+font-size: 14px; /* Adjust font size as needed */
+margin-right: 10px;
+border-radius: 28px
+
+}

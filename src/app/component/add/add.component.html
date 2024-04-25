@@ -1,0 +1,54 @@
+<div mat-dialog-title class="blue-header">
+  <h1 >Person Address Form</h1>
+</div>
+<form [formGroup]="addForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+      <div class="row">
+          <label class="align"><b>Name</b></label>
+          <mat-form-field class="name-box" appearance="outline">
+              <mat-label><b>Name</b></mat-label>
+              <input matInput placeholder="Ex John" formControlName="name">
+          </mat-form-field>
+      </div>
+
+      <div class="row">
+          <label class="align"><b>Address</b></label>
+          <div>
+              <input type="text" class="name-box" placeholder="Enter text here" formControlName="address">
+          </div>
+      </div>
+
+      <div class="row">
+          <label class="align"><b>Phone Number</b></label>
+          <div>
+              <input type="text" class="name-box" placeholder="Enter text here" formControlName="phonenumber">
+          </div>
+      </div>
+
+      <div class="row">
+          <mat-form-field class="name-box" appearance="outline">
+              <mat-label>State</mat-label>
+              <mat-select formControlName="state">
+                  <mat-option *ngFor="let val of city" [value]="val">{{val}}</mat-option>
+              </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="name-box" appearance="outline">
+              <mat-label>City</mat-label>
+              <mat-select formControlName="city">
+                  <mat-option *ngFor="let val of city" [value]="val">{{val}}</mat-option>
+              </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="name-box" appearance="outline">
+              <mat-label>Pin Code</mat-label>
+              <input matInput type="number" formControlName="pincode">
+          </mat-form-field>
+      </div>
+  </div>
+
+  <div mat-dialog-actions class="action">
+      <button [mat-dialog-close]="false">Cancel</button>
+      <button color="accent" type="submit">{{data ? 'Update' : 'Save'}}</button>
+  </div>
+</form>
